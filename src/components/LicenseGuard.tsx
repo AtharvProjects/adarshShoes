@@ -77,9 +77,25 @@ export function LicenseGuard({ children }: { children: React.ReactNode }) {
               Please enter your license key to continue using Adarsh Shoes Billing Software.
             </p>
             {machineId && (
-              <div className="mt-4 rounded-md bg-muted p-3 text-center w-full">
-                <span className="text-xs text-muted-foreground block mb-1">Your Machine ID</span>
-                <span className="font-mono text-sm font-semibold select-all">{machineId}</span>
+              <div className="mt-4 rounded-md bg-muted p-4 text-center w-full border border-border">
+                <span className="text-xs text-muted-foreground block mb-2 uppercase font-semibold">Your Hardware ID</span>
+                <div className="flex items-center justify-between bg-background rounded-md px-3 py-2 border">
+                  <span className="font-mono text-sm font-semibold text-primary">{machineId}</span>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="h-8 px-2 ml-2" 
+                    onClick={() => {
+                      navigator.clipboard.writeText(machineId);
+                      toast.success("Hardware ID copied to clipboard");
+                    }}
+                  >
+                    Copy
+                  </Button>
+                </div>
+                <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
+                  Please copy this Hardware ID and send it to the developer to receive your Activation Key.
+                </p>
               </div>
             )}
           </div>
@@ -87,17 +103,17 @@ export function LicenseGuard({ children }: { children: React.ReactNode }) {
           <div className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="licenseKey" className="text-sm font-medium">
-                License Key
+                Activation Key
               </label>
               <Input
                 id="licenseKey"
-                placeholder="GKS-XXXX-XXXX-XXXX"
+                placeholder="Enter your activation key..."
                 value={licenseInput}
                 onChange={(e) => setLicenseInput(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') handleActivate();
                 }}
-                className="font-mono uppercase"
+                className="font-mono uppercase text-center tracking-widest"
                 autoComplete="off"
               />
             </div>
@@ -121,7 +137,7 @@ export function LicenseGuard({ children }: { children: React.ReactNode }) {
           </div>
           
           <div className="mt-6 text-center text-xs text-muted-foreground">
-            If you do not have a license key, please contact support.
+            Adarsh Shoes Billing Software &copy; {new Date().getFullYear()}
           </div>
         </div>
       </div>
