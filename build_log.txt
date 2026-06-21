@@ -1,0 +1,9 @@
+  • electron-builder  version=25.1.8 os=10.0.26200
+  • loaded configuration  file=package.json ("build" field)
+  • executing @electron/rebuild  electronVersion=34.5.8 arch=arm64 buildFromSource=false appDir=./
+  • installing native dependencies  arch=arm64
+  • preparing       moduleName=better-sqlite3 arch=arm64
+  • finished        moduleName=better-sqlite3 arch=arm64
+  • completed installing native dependencies
+  • packaging       platform=win32 arch=arm64 electron=34.5.8 appOutDir=dist-electron\win-arm64-unpacked
+  ⨯ ENOENT: no such file or directory, rename 'C:\Users\ashitosh\.gemini\antigravity-ide\scratch\shoesnew\dist-electron\win-arm64-unpacked\electron.exe' -> 'C:\Users\ashitosh\.gemini\antigravity-ide\scratch\shoesnew\dist-electron\win-arm64-unpacked\Gajraj Kirana Billing.exe'  failedTask=build stackTrace=Error: ENOENT: no such file or directory, rename 'C:\Users\ashitosh\.gemini\antigravity-ide\scratch\shoesnew\dist-electron\win-arm64-unpacked\electron.exe' -> 'C:\Users\ashitosh\.gemini\antigravity-ide\scratch\shoesnew\dist-electron\win-arm64-unpacked\Gajraj Kirana Billing.exe'

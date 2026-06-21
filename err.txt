@@ -1,0 +1,4 @@
+[2026-06-19T14:05:03.971Z] [ERROR] Uncaught Exception - Error: spawn C:\Users\ashitosh\.gemini\antigravity-ide\scratch\shoesnew\dist-electron\win-arm64-unpacked\Gajraj Kirana Billing.exe ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+    at onErrorNT (node:internal/child_process:483:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
