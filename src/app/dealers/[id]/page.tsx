@@ -32,9 +32,8 @@ interface Transaction {
   notes: string;
 }
 
-export default function KhatabookPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params);
-  const dealerId = resolvedParams.id;
+export default function KhatabookPage({ params }: { params: { id: string } }) {
+  const dealerId = params.id;
   const router = useRouter();
   const { t } = useLanguage();
 
